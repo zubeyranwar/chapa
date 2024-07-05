@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 5.57%,
+    rgba(125, 196, 0, 0.3) 100%
+  );
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0;
+    box-shadow: none;
+  }
+}
+
+.animate-wave {
+  animation: wave 2s infinite;
+}
+
+.shadow-custom-shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.border-4 {
+  border-width: 4px;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+@keyframes upDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-up-down {
+  animation: upDown 2s infinite;
+}
+
+.path {
+  stroke: #000;
+  stroke-width: 2;
+  fill: none;
+  stroke-dasharray: 1000; /* This value should be the length of the path */
+  stroke-dashoffset: 1000; /* This value should be the length of the path */
+  animation: draw 4s linear forwards; /* Adjust the duration as needed */
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
